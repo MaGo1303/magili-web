@@ -9,8 +9,8 @@ import { ArrowRight, Bot, Globe, Check } from "lucide-react";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Strict Full Screen */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Hero Section - Responsive Height */}
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-background py-10 md:py-0">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
@@ -18,24 +18,24 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="space-y-8 max-w-2xl"
+              className="space-y-6 md:space-y-8 max-w-2xl text-center lg:text-left"
             >
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-foreground leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-foreground leading-[1.1]">
                 Digitalización corporativa <span className="text-primary">sin fricción.</span>
               </h1>
 
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Eliminamos la complejidad tecnológica para que tu empresa opere con eficiencia absoluta. Automatizaciones inteligentes y webs de alto rendimiento.
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link href="/contacto">
-                  <Button size="lg" className="rounded-full px-8 text-base h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                <Link href="/contacto" className="w-full sm:w-auto">
+                  <Button size="lg" className="rounded-full w-full sm:w-auto px-8 text-base h-12 md:h-14 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20">
                     Empezar Proyecto
                   </Button>
                 </Link>
-                <Link href="/packs">
-                  <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-14 border-input hover:bg-secondary">
+                <Link href="/packs" className="w-full sm:w-auto">
+                  <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto px-8 text-base h-12 md:h-14 border-input hover:bg-secondary">
                     Ver Packs
                   </Button>
                 </Link>
@@ -65,7 +65,7 @@ export default function Home() {
       <section className="border-t border-border">
         <div className="grid md:grid-cols-2">
           {/* Web - With Image */}
-          <div className="relative overflow-hidden group min-h-[500px]">
+          <div className="relative overflow-hidden group min-h-[300px] md:min-h-[500px]">
             <div className="absolute inset-0 z-10 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Background Image */}
@@ -81,7 +81,7 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 h-full p-12 md:p-24 flex flex-col justify-end text-white">
+            <div className="relative z-20 h-full p-8 md:p-24 flex flex-col justify-end text-white">
               <Globe className="h-12 w-12 mb-6 text-white" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Presencia Web</h2>
               <p className="text-white/90 text-lg mb-8 leading-relaxed max-w-md">
@@ -94,7 +94,7 @@ export default function Home() {
           </div>
 
           {/* Automatizaciones - With Image */}
-          <div className="relative overflow-hidden group min-h-[500px]">
+          <div className="relative overflow-hidden group min-h-[300px] md:min-h-[500px]">
             <div className="absolute inset-0 z-10 bg-primary/90 opacity-0 group-hover:opacity-90 transition-opacity duration-500" />
 
             {/* Background Image */}
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 h-full p-12 md:p-24 flex flex-col justify-end text-white">
+            <div className="relative z-20 h-full p-8 md:p-24 flex flex-col justify-end text-white">
               <Bot className="h-12 w-12 mb-6 text-white" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Automatización</h2>
               <p className="text-white/90 text-lg mb-8 leading-relaxed max-w-md">

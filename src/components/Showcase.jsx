@@ -32,11 +32,12 @@ export default function Showcase() {
                             className="group cursor-pointer"
                         >
                             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-black/10 bg-gray-50 mb-4 transition-all duration-500 group-hover:border-green-500/50">
-                                {/* Using next/image for optimization */}
                                 <Image
                                     src={project.img}
                                     alt={project.title}
                                     fill
+                                    quality={75}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                                 />
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

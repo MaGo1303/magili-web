@@ -61,8 +61,8 @@ export default function Process() {
 
     return (
         <section ref={containerRef} id="process" className="py-24 bg-white relative overflow-hidden">
-            {/* Animated Background Blobs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {/* Animated Background Blobs - Hidden on mobile for performance */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
                 <motion.div
                     animate={{
                         x: [0, 100, 0],

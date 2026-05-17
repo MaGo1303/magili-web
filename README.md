@@ -1,15 +1,15 @@
 # Magili Web
 
-## ðŸ“‹ DescripciÃ³n
+## Descripcion
 
 Proyecto web Magili.
 
-## ðŸš€ Stack
+## Stack
 
 - **Frontend:** JavaScript, HTML, CSS
 - **Backend:** Node.js
 
-## ðŸ› ï¸ CÃ³mo ejecutar
+## Como ejecutar
 
 ```bash
 npm install
